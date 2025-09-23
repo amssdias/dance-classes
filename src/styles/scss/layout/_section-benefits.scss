@@ -12,11 +12,16 @@
         align-items: center;
 
         & h2 {
-            color: $color-text-dark;
             
             & span {
                 display: inline-block;
                 animation: wave 2s ease-in-out infinite;
+
+                background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+                background-size: 200%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
             @for $i from 1 through 30 {

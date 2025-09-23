@@ -1,0 +1,53 @@
+@use '../abstracts/mixins' as *;
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+        list-style-type: none;
+        width: 40%;
+
+        margin-bottom: 2rem;
+
+        @include respond(tab-land) {
+            width: 60%;
+        }
+
+        @include respond(phone) {
+            width: 80%;
+        }
+
+    }
+
+    &__question {
+        font-size: 2.2rem;
+        padding: 1rem 0rem;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid black;
+
+        & span:first-child {
+            text-align: left;
+        }
+    }
+
+    &__icon {
+
+    }
+
+    &__answer {
+        padding: 2rem 0rem;
+        transition: .2s;
+
+        & .paragraph {
+            font-size: 1.8rem !important;
+        }
+    }
+}

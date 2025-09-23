@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+
+.section-final-cta {
+    padding: 4rem 0rem;
+    height: 20rem;
+
+    text-align: center;
+
+    background: linear-gradient($color-bg-light, $color-primary-light);
+}

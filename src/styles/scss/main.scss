@@ -10,11 +10,15 @@
 @use "./components/bg-video";
 @use "./components/btn";
 @use "./components/card";
+@use "./components/faq";
 @use "./components/testimonials";
 
 @use "./layout/header";
+@use "./layout/footer";
 @use "./layout/grid";
 @use "./layout/section-benefits";
 @use "./layout/section-classes";
+@use "./layout/section-faq";
+@use "./layout/section-final-cta";
 @use "./layout/section-intro";
 @use "./layout/section-testimonials";

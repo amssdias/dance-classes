@@ -7,14 +7,6 @@
         $color-bg
         );
 
-    &__header {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-
-        padding: 2rem;
-    }
-
     &__content {
         text-align: center;
 
@@ -64,26 +56,3 @@
     opacity: 0;
   }
 }
-
-// .neon-pulse {
-//   background: #000;
-//   border: 2px solid #0ff;
-//   box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-//   overflow: visible;
-// }
-
-// .neon-pulse::before,
-// .neon-pulse::after {
-//   content: "";
-//   position: absolute;
-//   inset: -4px;
-//   border: 2px solid #0ff;
-//   border-radius: inherit;
-//   animation: pulseOut 2s ease-out infinite;
-//   opacity: 0;
-// }
-
-// .neon-pulse::after {
-//   animation-delay: 1s;
-// }
-
