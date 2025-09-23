@@ -1,0 +1,25 @@
+.section-classes {
+    border: 1px solid green;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content {
+        border: 1px solid red;
+        text-align: center;
+        // display: flex;
+        // justify-content: center;
+
+        &__cta {
+
+        }
+    }
+
+    & a {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+    }
+}

@@ -1,0 +1,73 @@
+@use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
+
+.cards-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 20% 20% 20%;
+    grid-gap: 2rem;
+
+    justify-content: center;
+
+    padding: 4rem 15rem;
+
+    @include respond(tab-land) {
+		padding: 4rem 5rem;
+        grid-template-columns: 25% 25% 25%;
+	}
+
+    @include respond(tab-port) {
+		padding: 4rem 5rem;
+        grid-template-columns: 30% 30% 30%;
+	}
+
+    
+    @include respond(phone) {
+		padding: 4rem 5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+	}
+}
+
+.card {
+    list-style-type: none;
+
+    background-color: $color-bg-light;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0.75rem;
+
+    transition: 0.2s;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    &__body {
+        width: 100%;
+        padding: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__icon {
+        // width: 10rem;
+        width: 50%;
+    }
+
+    &__title {
+        color: $color-text-dark;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    &__text {
+        color: $color-text-light;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+}

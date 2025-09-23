@@ -1,0 +1,122 @@
+@use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
+
+.section-intro {
+    background-color: $color-bg-light;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    height: 60rem;
+
+    padding: 4rem 0rem;
+
+    @include respond(phone) {
+		flex-direction: column;
+        align-items: center;
+        height: auto;
+	}
+
+    &__content {
+        padding: 0rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+
+        @include respond(phone) {
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+
+        & p {
+            text-align: center;
+            width: 90%;
+        }
+
+        &__value {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+
+            width: 100%;
+
+            & .big-number {
+                font-size: 4rem;
+                position: relative;
+
+                & span {
+                    font-size: 2rem;
+                    position: absolute;
+                    top: 0;
+
+                    color: $color-primary;
+                }
+            }
+
+            & p {
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+
+    &__img {
+        display: flex;
+        width: 30%;
+
+        position: relative;
+
+        @include respond(phone) {
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 85%;
+        }
+
+        &--img {
+            width: 60%;
+            border-radius: 1rem;
+            margin-right: 1rem;
+            position: absolute;
+
+            @include respond(tab-land) {
+                width: 65%;
+            }
+
+            @include respond(phone) {
+                position: static;
+                width: 40%;
+            }
+
+            &-1 {
+                top: 0;
+                left: -10%;
+
+                @include respond(tab-land) {
+                    top: 0;
+                    left: -20%
+                }
+
+                @include respond(tab-port) {
+                    top: 10%;
+                }
+            }
+
+            &-2 {
+                top: 15%;
+                left: 40%;
+
+                @include respond(tab-land) {
+                    top: 15%;
+                    left: 30%;
+                }
+
+                @include respond(tab-port) {
+                    top: 45%;
+                    left: 25%;
+                }
+            }
+        }
+    }
+}

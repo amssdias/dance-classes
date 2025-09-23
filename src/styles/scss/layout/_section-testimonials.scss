@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.section-testimonials {
+
+    padding: 4rem 0rem;
+
+    background-color: $color-bg-light;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & h2 {
+            color: $color-text-dark;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.4rem;
+        color: $color-text-light;
+    }
+
+}
