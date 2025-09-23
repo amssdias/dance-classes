@@ -1,6 +1,7 @@
 @use "./abstracts/mixins";
 @use "./abstracts/variables" as *;
 
+@use "./base/animations";
 @use "./base/base";
 @use "./base/reset";
 @use "./base/typography";

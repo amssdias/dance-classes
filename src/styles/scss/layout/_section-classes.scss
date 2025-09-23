@@ -1,25 +1,89 @@
+@use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
+
 .section-classes {
-    border: 1px solid green;
+    background: linear-gradient(
+        $color-bg-light, 
+        $color-bg
+        );
 
     &__header {
         display: flex;
         justify-content: center;
+        text-align: center;
+
+        padding: 2rem;
     }
 
     &__content {
-        border: 1px solid red;
         text-align: center;
-        // display: flex;
-        // justify-content: center;
 
         &__cta {
-
+            padding: 2rem 0rem;
         }
     }
 
-    & a {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 auto;
+        border: 2px solid $color-accent-green;
+        border-radius: 40rem;
+        color: $color-accent-green;
+
+        width: 20%;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+
+        animation: floating 2s ease-in-out infinite;
+
+        @include respond(tab-port) {
+            width: 35%;
+        }
+
+        @include respond(phone) {
+            width: 40%;
+        }
+
+        &__icon {
+            width: 2rem;
+            margin-right: 1rem;
+        }
     }
 }
+
+@keyframes pulseOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+// .neon-pulse {
+//   background: #000;
+//   border: 2px solid #0ff;
+//   box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+//   overflow: visible;
+// }
+
+// .neon-pulse::before,
+// .neon-pulse::after {
+//   content: "";
+//   position: absolute;
+//   inset: -4px;
+//   border: 2px solid #0ff;
+//   border-radius: inherit;
+//   animation: pulseOut 2s ease-out infinite;
+//   opacity: 0;
+// }
+
+// .neon-pulse::after {
+//   animation-delay: 1s;
+// }
+

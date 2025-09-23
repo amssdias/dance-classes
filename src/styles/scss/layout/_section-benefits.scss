@@ -13,7 +13,19 @@
 
         & h2 {
             color: $color-text-dark;
+            
+            & span {
+                display: inline-block;
+                animation: wave 2s ease-in-out infinite;
+            }
+
+            @for $i from 1 through 30 {
+                & span:nth-child(#{$i}) {
+                    animation-delay: $i * 0.1s;
+                }
+            }
         }
+
     }
 
     &__subtitle {
