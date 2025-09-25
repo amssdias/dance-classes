@@ -2,12 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .footer {
-
-    background: linear-gradient(
-        $color-primary-light, 
-        $color-primary-dark
-    );
+    background: linear-gradient(135deg, #4F3C82, #6A52B3);
     padding: 3rem 0rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
 
     display: flex;
     flex-direction: column;
@@ -17,10 +14,29 @@
     &__content {
         display: flex;
         justify-content: space-evenly;
+        padding: 2rem 1rem;
+        width: 100%;
+
+        @include respond(phone) {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-row-gap: 4rem;
+        }
 
         &__info {
-            width: 30%;
             text-align: center;
+
+            @include respond(phone) {
+                &:first-child {
+                    grid-column: 1 / 5;
+                }
+
+                &:nth-child(2) {
+                    grid-column: 1 / 4;
+                }
+
+            }
 
             & h4 {
                 font-size: 1.6rem;
@@ -29,8 +45,20 @@
 
             & p {
                 font-size: 1.4rem;
-                color: $color-black;
+                color: $color-white;
+                letter-spacing: 0.1rem;
             }
+        }
+    }
+
+    &__social-networks {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        
+
+        & a svg {
+            width: 5rem;
         }
     }
 

@@ -14,15 +14,16 @@ body {
 
 .heading-secondary {
     font-size: 4rem;
-    // color: $color-primary-dark;
+    font-weight: 700;
 
-    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    // background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background: linear-gradient(to right, #A896D9, #4F3C82, #FF4F81);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    animation: animate-gradient 2.5s linear infinite;
+    // animation: animate-gradient 2.5s linear infinite;
 }
 
 .paragraph {

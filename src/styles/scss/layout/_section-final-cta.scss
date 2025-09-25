@@ -2,9 +2,19 @@
 
 .section-final-cta {
     padding: 4rem 0rem;
-    height: 20rem;
 
     text-align: center;
 
-    background: linear-gradient($color-bg-light, $color-primary-light);
+
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url("/src/assets/images/class-1.avif") center/cover no-repeat;
+
+    & h2 {
+        animation: animate-gradient 2.5s linear infinite;
+    }
+    
+    & p {
+        color: $color-white;
+        font-size: 1.8rem;
+    }
 }
