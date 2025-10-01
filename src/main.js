@@ -1,10 +1,14 @@
 import './styles/scss/main.scss'
-// import javascriptLogo from './javascript.svg'
-// import viteLogo from '/vite.svg'
+import { initI18n } from "./translations.js";
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await initI18n();
+});
 
 document.querySelectorAll(".faq__item").forEach(function (cardElement) {
     cardElement.addEventListener("click", displayCardParagraph);
 })
+
 
 function displayCardParagraph() {
     const btn = this.querySelector(".faq__question");
